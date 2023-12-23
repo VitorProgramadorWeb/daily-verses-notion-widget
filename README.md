@@ -3,4 +3,4 @@ Ele mostra versículos diários, em português, na tradução NVI, fornecidos pe
 A cor é baseada nas preferências do sistema (Ligth/Dark).
 
 Para mais informações:
-https://dailyverses.net/pt/vers%C3%ADculo-do-dia-em-seu-site/
+https://dailyverses.net/pt/versículo-do-dia-em-seu-site/
