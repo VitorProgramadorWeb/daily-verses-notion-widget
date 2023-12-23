@@ -2,7 +2,7 @@
 <html lang="pt">
 <head>
 
-    <title>Versículo aleatório</title>
+    <title>Versículo diário</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,6 @@
     <style>
         body {
             font-family: monospace, Arial, Helvetica, sans-serif;
-            color: black;
             
             display: flex;
             justify-content: center;
@@ -23,17 +22,13 @@
             text-align: end;
             margin-top: .5em;
         }
-        .dailyVerses.bibleVerse a{
-            color: black;
-        }
         
+        body, a {
+            color: #191919;
+        }
         @media (prefers-color-scheme: dark) {
-            body {
-                background-color: rgb(255, 25, 25);
-            }
-
-            body, #dailyVersesWrapper, .dailyVerses.bibleText, .dailyVerses.bibleVerse a{
-                color: white;
+            body, a {
+                color: #d4d4d4;
             }
         }
     </style>
@@ -41,7 +36,7 @@
 </head>
 <body>
     
-    <div id="dailyVersesWrapper" style="color: black;"></div>
+    <div id="dailyVersesWrapper"></div>
     <script async defer src="https://dailyverses.net/get/verse.js?language=nvi-pt"></script>
 
 </body>
