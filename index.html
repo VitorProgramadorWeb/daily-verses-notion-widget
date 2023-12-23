@@ -15,19 +15,26 @@
             display: flex;
             justify-content: center;
         }
-        
-        .dailyVerses.bibleText {
-            font-weight: bold;
-        }
+
         .dailyVerses.bibleText::before, .dailyVerses.bibleText::after {
             content: "\"";
         }
         .dailyVerses.bibleVerse {
-            margin-top: .5em;
             text-align: end;
+            margin-top: .5em;
         }
         .dailyVerses.bibleVerse a{
             color: black;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: rgb(255, 25, 25);
+            }
+
+            body, #dailyVersesWrapper, .dailyVerses.bibleText, .dailyVerses.bibleVerse a{
+                color: white;
+            }
         }
     </style>
 
@@ -35,18 +42,7 @@
 <body>
     
     <div id="dailyVersesWrapper" style="color: black;"></div>
-    <script async defer src="https://dailyverses.net/get/verse.js?language=nvi-pt" onload="darkMode()"></script>
-    
-    <!-- Dark mode -->
-    <script>
-        var dark = window.matchMedia('(prefers-color-scheme: dark)');
+    <script async defer src="https://dailyverses.net/get/verse.js?language=nvi-pt"></script>
 
-        function darkMode() {
-            if(dark) {
-                document.getElementById("dailyVersesWrapper").style.color = "white";
-                document.querySelector("a").style.color = "white";
-            }
-        }
-    </script>
 </body>
 </html>
