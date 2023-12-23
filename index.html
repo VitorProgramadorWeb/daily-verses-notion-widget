@@ -8,20 +8,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            
+            display: flex;
+            justify-content: center;
+        }
+        
+        .dailyVerses.bibleText {
+            font-weight: bold;
+        }
+        .dailyVerses.bibleText::before, .dailyVerses.bibleText::after {
+            content: "\"";
+        }
         .dailyVerses.bibleVerse {
             margin-top: .5em;
         }
-
-        .dailyVerses.bibleVerse a {
-            font-weight: bold;
+        .dailyVerses.bibleVerse a{
+            color: black;
         }
     </style>
 
 </head>
 <body>
+    
+    <div id="dailyVersesWrapper" style="color: black;"></div>
+    <script async defer src="https://dailyverses.net/get/verse.js?language=nvi-pt" onload="darkMode()"></script>
+    
+    <!-- Dark mode -->
+    <script>
+        var dark = window.matchMedia('(prefers-color-scheme: dark)');
 
-    <div id="dailyVersesWrapper"></div>
-    <script async defer src="https://dailyverses.net/get/verse.js?language=nvi-pt"></script>
-
+        function darkMode() {
+            if(dark) {
+                document.getElementById("dailyVersesWrapper").style.color = "white";
+                document.querySelector("a").style.color = "white";
+            }
+        }
+    </script>
 </body>
 </html>
